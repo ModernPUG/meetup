@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>006z</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "006d" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "007" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+                              CodeIgniter vs Slim
+    
+    * 압축
+      * CI - 2321739 바이트 (2.1.3)
+      * Slim - 104862 바이트 (2.2.0)
+    * 비압축
+      * CI - 5052 KB
+      * Slim - 524 KB
+    * 라인 수
+      * CI - 51391 라인
+      * Slim - 11723 라인
+    * 속도 (C-100, N-10000, nginx/1.1.19, php-fpm/5.3.10)
+      * CI - 87.030 [ms]
+      * Slim - 78.711 [ms]
+
+
+
+
+
+
+
+</pre>
+</body>

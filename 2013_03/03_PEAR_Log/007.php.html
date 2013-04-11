@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>007.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "006.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "008.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                Log Line Format
+  
+  &lt;?php
+  
+  require_once 'Log.php';
+  
+  class Factorial
+  {
+      static public function compute($n)
+      {
+          $n = 10;
+          $factorial = 1;
+          for ($i = 1; $i &lt;= $n; $i++) {
+              $GLOBALS['logger']-&gt;log(&quot;f($i) = $factorial * $i&quot;);
+              $factorial *= $i;
+          }
+          echo &quot;factorial($n) = $factorial\n&quot;;
+      }
+  }
+  
+  $line_format = array(
+      'lineFormat' =&gt; '%{timestamp} %{ident} %{priority} %{message} %{file} '.
+          '%{line} %{function} %{class}',
+  );
+  
+  $logger = Log::singleton('file', 'log_line_format.log', 'factorial', 
+      $line_format);
+  
+  Factorial::compute(10);
+  
+  $line_format = array('lineFormat' =&gt; '%1$s %2$s %3$s %4$s %5$s %6$s %7$s %8$s');
+  
+  $logger = Log::singleton('file', 'log_line_format.log', 'factorial', 
+      $line_format);
+  
+  Factorial::compute(10);
+</pre>
+</body>

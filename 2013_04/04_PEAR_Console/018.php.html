@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>018.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "017z" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "019.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+                              Simple Progress Bar
+  &lt;?php
+  require_once 'Console/ProgressBar.php';
+  
+  $bar = new Console_ProgressBar('[%bar%] %percent%', '=&gt;', ' ', 80, 1000);
+  for ($i = 0; $i &lt;= 1000; $i++) {
+      $bar-&gt;update($i);
+      usleep(5000);
+  }
+  $bar-&gt;erase();
+  ?&gt;
+
+
+
+
+
+
+
+
+</pre>
+</body>
