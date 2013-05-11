@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>023.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "022z" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "024" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                                                            Mutex
+  &lt;?php
+  
+  class MyThread extends Thread
+  {
+      private $mutex;
+  
+      public function __construct($mutex)
+      {
+          $this-&gt;mutex = $mutex;
+      }
+  
+      public function run()
+      {
+          for ($i = 0; $i &lt; 10; $i++) {
+              Mutex::lock($this-&gt;mutex);
+              echo &quot;&lt;&quot;.$this-&gt;getThreadId().&quot;:$i&quot;;
+              usleep(rand(100000, 200000));
+              echo &quot;&gt;\n&quot;;
+              Mutex::unlock($this-&gt;mutex);
+              usleep(rand(100000, 200000));
+          }
+      }
+  }
+  
+  class OtherThread extends MyThread
+  {
+      public function run()
+      {
+          for ($i = 0; $i &lt; 10; $i++) {
+              if (Mutex::trylock($this-&gt;mutex)) {
+                  echo &quot;[&quot;.$this-&gt;getThreadId().&quot;:$i&quot;;
+                  usleep(rand(100000, 200000));
+                  echo &quot;]\n&quot;;
+                  Mutex::unlock($this-&gt;mutex);
+              }
+              usleep(rand(100000, 200000));
+          }
+      }
+  }
+  
+  $mutex = Mutex::create();
+  
+  $t1 = new MyThread($mutex);
+  $t2 = new MyThread($mutex);
+  $t3 = new OtherThread($mutex);
+  
+  $t1-&gt;start();
+  $t2-&gt;start();
+  $t3-&gt;start();
+  
+  $t1-&gt;join();
+  $t2-&gt;join();
+  $t3-&gt;join();
+  
+  Mutex::destroy($mutex);
+  
+  ?&gt;
+</pre>
+</body>

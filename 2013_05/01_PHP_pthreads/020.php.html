@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>020.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "019z" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "021.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                                                            Worker
+  &lt;?php
+  
+  class Site extends Stackable
+  {
+      private $prefix;
+      private $url;
+  
+      public function __construct($prefix, $url)
+      {
+          $this-&gt;prefix = $prefix;
+          $this-&gt;url = $url;
+      }
+  
+      public function run()
+      {
+          $this-&gt;worker-&gt;fetch($this-&gt;prefix, $this-&gt;url);
+      }
+  }
+  
+  class Fetcher extends Worker 
+  {
+      public function run()
+      {
+      }
+  
+      public function fetch($prefix, $url)
+      {
+          $file = new SplFileObject($url);
+          while (!$file-&gt;eof()) {
+              $file-&gt;fgets();
+              echo $prefix;
+          }
+      }
+  }
+  
+  $worker1 = new Fetcher();
+  $worker2 = new Fetcher();
+  
+  $worker1-&gt;start();
+  $worker2-&gt;start();
+  
+  $worker1-&gt;stack(new Site('N', 'http://naver.com/'));
+  $worker2-&gt;stack(new Site('D', 'http://daum.net/'));
+  $worker1-&gt;stack(new Site('C', 'http://www.clien.net/'));
+  $worker2-&gt;stack(new Site('S', 'http://www.slrclub.com/'));
+  
+  $worker1-&gt;shutdown();
+  $worker2-&gt;shutdown();
+  
+  ?&gt;
+</pre>
+</body>

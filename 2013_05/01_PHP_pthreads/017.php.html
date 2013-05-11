@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>017.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "016.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "018" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                                                         Synchronized
+  &lt;?php
+  class Sync extends Thread
+  {
+      private $count;
+  
+      public function __construct()
+      {
+          $this-&gt;count = 0;
+      }
+  
+      public function run()
+      {
+          echo &quot;Thread started.\n&quot;;
+          for ($i = 0; $i &lt; 10; $i++) {
+              $this-&gt;synchronized(function ($this) {
+                  echo $this-&gt;count++.&quot;\n&quot;;
+                  $this-&gt;wait();
+              }, $this);
+          }
+          echo &quot;Thread stopped.\n&quot;;
+      }
+  }
+  
+  $t = new Sync();
+  
+  $t-&gt;start();
+  
+  for ($i = 0; $i &lt; 10; $i++) {
+      sleep(1);
+      $t-&gt;synchronized(function ($t) {
+          $t-&gt;notify();
+      }, $t);
+  }
+  
+  $t-&gt;join();
+  
+  ?&gt;
+</pre>
+</body>

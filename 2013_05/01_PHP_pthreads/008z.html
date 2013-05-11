@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>008z</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "008e" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "009" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+                                                                         세마포어
+  
+  * 세마포어(Semaphore)는 에츠허르 데이크스트라가 고안한, 두 
+    개의 원자적 함수로 조작되는 정수 변수로서, 멀티프로그래밍 
+    환경에서 공유 자원에 대한 접근을 제한하는 방법으로 
+    사용된다. (Wikipedia)
+  * 원자적이란 나눌 수 없는 것
+  * i += 5; // in C
+    * movl    -12(%rbp), %eax
+    * addl    $5, %eax
+    * movl    %eax, -12(%rbp)
+  * 계수 세마포어, 이진 세마포어(0, 1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>

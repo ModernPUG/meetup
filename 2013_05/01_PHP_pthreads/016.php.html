@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>016.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "015.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "017.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                                                         Multi Thread
+  &lt;?php
+  
+  class Fetcher extends Thread
+  {
+      private $prefix;
+      private $url;
+  
+      public function __construct($prefix, $url)
+      {
+          $this-&gt;prefix = $prefix;
+          $this-&gt;url = $url;
+      }
+  
+      public function run()
+      {
+          $file = new SplFileObject($this-&gt;url);
+          while (!$file-&gt;eof()) {
+              $file-&gt;fgets();
+              echo $this-&gt;prefix;
+          }
+      }
+  }
+  $urls = array(
+      'N' =&gt; 'http://naver.com/',
+      'D' =&gt; 'http://daum.net/',
+      'C' =&gt; 'http://www.clien.net/',
+      'S' =&gt; 'http://www.slrclub.com/',
+  );
+  
+  $threads = array();
+  foreach ($urls as $key =&gt; $url)
+  {
+      $t = new Fetcher($key, $url);
+      $threads[] = $t;
+  
+      $t-&gt;start();
+  }
+  
+  foreach ($threads as $thread)
+  {
+      $thread-&gt;join();
+  }
+  
+  ?&gt;
+</pre>
+</body>

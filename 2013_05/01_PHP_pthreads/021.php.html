@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>021.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "020.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "022" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                                                             Pool
+  &lt;?php
+  
+  class Site extends Stackable
+  {
+      private $prefix;
+      private $url;
+  
+      public function __construct($prefix, $url)
+      {
+          $this-&gt;prefix = $prefix;
+          $this-&gt;url = $url;
+      }
+  
+      public function run()
+      {
+          $this-&gt;worker-&gt;fetch($this-&gt;prefix, $this-&gt;url);
+      }
+  }
+  
+  class Fetcher extends Worker 
+  {
+      public function run()
+      {
+      }
+  
+      public function fetch($prefix, $url)
+      {
+          $file = new SplFileObject($url);
+          while (!$file-&gt;eof()) {
+              $file-&gt;fgets();
+              echo $prefix;
+          }
+      }
+  }
+  
+  class Pool
+  {
+      private $workers;
+  
+      public function __construct($size = 2)
+      {
+          for ($i = 0; $i &lt; $size; $i++) {
+              $this-&gt;workers[$i] = new Fetcher();
+              $this-&gt;workers[$i]-&gt;start();
+          }
+      }
+  
+      public function submit(Stackable $work)
+      {
+          $index = -1;
+          $stacked = PHP_INT_MAX;
+          foreach ($this-&gt;workers as $key =&gt; $worker) {
+              if ($worker-&gt;isShutdown() == false &amp;&amp; $worker-&gt;getStacked() &lt; $stacked) {
+                  $stacked = $worker-&gt;getStacked();
+                  $index = $key;
+              }
+          }
+  
+          if ($index &gt;= 0 &amp;&amp; $this-&gt;workers[$index]-&gt;isShutdown() == false) {
+              $this-&gt;workers[$index]-&gt;stack($work);
+          }
+      }
+  
+      public function shutdown()
+      {
+          foreach ($this-&gt;workers as $worker) {
+              $worker-&gt;shutdown();
+          }
+      }
+  }
+  
+  $urls = array(
+      'N' =&gt; 'http://naver.com/',
+      'D' =&gt; 'http://daum.net/',
+      'C' =&gt; 'http://www.clien.net/',
+      'S' =&gt; 'http://www.slrclub.com/',
+  );
+  
+  $pool = new Pool(2);
+  
+  foreach ($urls as $prefix =&gt; $url) {
+      $pool-&gt;submit(new Site($prefix, $url));
+  }
+  
+  $pool-&gt;shutdown();
+  ?&gt;
+</pre>
+</body>
