@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>049.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "048" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "050" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                                                     SplObjectStorage #7
+  
+  &lt;?php
+  
+  $obj1 = new StdClass;
+  $obj1-&gt;name = 'Thrall';
+  $obj2 = new StdClass;
+  $obj2-&gt;name = 'Sylvanas';
+  $obj3 = new StdClass;
+  $obj3-&gt;name = 'Cairne';
+  $obj4 = new StdClass;
+  $obj4-&gt;name = 'Voljin';
+  
+  // 동부왕국에는 실바나스
+  $eastern_kingdom = new SplObjectStorage();
+  $eastern_kingdom-&gt;attach($obj2, 'Undead');
+  
+  // 칼림도어에는 쓰랄, 케른, 볼진
+  $kalimdor = new SplObjectStorage();
+  $kalimdor-&gt;attach($obj1, 'Orc');
+  $kalimdor-&gt;attach($obj3, 'Tauren');
+  $kalimdor-&gt;attach($obj4, 'Troll');
+  
+  $chieftain = new SplObjectStorage();
+  
+  // 칼림도어와 동부 왕국의 모든 족장을 넣자
+  $chieftain-&gt;addAll($kalimdor);
+  $chieftain-&gt;addAll($eastern_kingdom);
+  
+  foreach ($chieftain as $obj) {
+      echo $obj-&gt;name, &quot;\n&quot;;
+  }
+  
+  echo &quot;--\n&quot;;
+  
+  // 칼림도어의 족장을 뺀 나머지는 제거
+  $chieftain-&gt;removeAllExcept($kalimdor);
+  
+  foreach ($chieftain as $obj) {
+      echo $obj-&gt;name, &quot;\n&quot;;
+  }
+  
+  echo &quot;--\n&quot;;
+  
+  // 칼림도어의 족장들을 제거
+  $chieftain-&gt;removeAll($kalimdor);
+  
+  echo &quot;Count = &quot;, $chieftain-&gt;count(), &quot;\n&quot;;
+  
+  ?&gt;
+</pre>
+</body>

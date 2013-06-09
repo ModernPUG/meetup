@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>040.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "039" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "041" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+                                                                       SplFixedArray #3
+  
+  &lt;?php
+  $fix = new SplFixedArray(10);
+  
+  $fix[1] = 1;
+  $fix[2] = 2;
+  $fix[4] = 3;
+  $fix[5] = 4;
+  $fix[9] = 5;
+  
+  echo &quot;size = &quot;, $fix-&gt;getSize(), &quot;\n&quot;;
+  
+  foreach ($fix as $n) {
+      echo &quot;$n\n&quot;;
+  }
+  
+  echo &quot;--\n&quot;;
+  
+  $fix-&gt;setSize(15);
+  $fix[14] = 6;
+  
+  foreach ($fix as $n) {
+      echo &quot;$n\n&quot;;
+  }
+  
+  ?&gt;
+
+
+
+
+
+
+
+</pre>
+</body>

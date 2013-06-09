@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>037.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "036" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "038" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+                                                                     SplPriorityQueue #4
+  
+  &lt;?php
+  class MyPriorityQueue extends SplPriorityQueue
+  {
+      final public function compare($a, $b)
+      {
+          if ($a &gt; $b) {
+              return 1;
+          }
+          if ($a &lt; $b) {
+              return -1;
+          }
+  
+          return 0;
+      }
+  }
+  
+  $pq = new MyPriorityQueue();
+  
+  for ($i = 1; $i &lt;= 5; $i++) {
+      $pq-&gt;insert(rand(1, 100), $i);
+  }
+  
+  $pq-&gt;setExtractFlags(SplPriorityQueue::EXTR_BOTH);
+  
+  foreach ($pq as $n) {
+      print_r($n);
+  }
+  
+  ?&gt;
+
+
+
+
+
+</pre>
+</body>

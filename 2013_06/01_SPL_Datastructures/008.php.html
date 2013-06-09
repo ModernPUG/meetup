@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>008.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "007" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "009" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+
+
+                                                                    SplDoublyLinkedList #2
+  
+  &lt;?php
+  $dll = new SplDoublyLinkedList();
+  
+  $dll-&gt;push(1);      // 1
+  $dll-&gt;push(2);      // 1, 2
+  $dll-&gt;push(3);      // 1, 2, 3
+  $n = $dll-&gt;pop();   // 1, 2 -&gt; (3)
+  
+  print &quot;$n\n&quot;;
+  
+  $dll-&gt;unshift('a'); // a, 1, 2
+  $dll-&gt;unshift('b'); // b, a, 1, 2
+  $dll-&gt;unshift('c'); // c, b, a, 1, 2
+  $c = $dll-&gt;shift(); // (c) &lt;- b, a, 1, 2
+  
+  print &quot;$c\n&quot;;
+  ?&gt;
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
