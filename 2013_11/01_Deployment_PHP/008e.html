@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>008e</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "008d" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "008z" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+
+                                   후처리
+  
+  * 심볼릭 링크
+     * $ ln -fns /var/www/hello-1.0 /var/www/hello
+  * 디렉토리 권한
+  * 프리로드(Preload) 데이터
+  * 세션 정리
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
