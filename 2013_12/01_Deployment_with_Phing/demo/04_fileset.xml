@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DeploymentWithPhing" default="main">
+    <target name="main">
+	<scp 
+	    username="bookworm" 
+	    host="www1.local" 
+	    todir="/Users/bookworm/Sites/www1/public" 
+	    pubkeyfile="~/.ssh/id_rsa.pub" 
+	    privkeyfile="~/.ssh/id_rsa"
+	>
+	    <fileset dir="/Users/bookworm/workspace/sandbox/project1">
+		<include name="*.php" />
+	    </fileset>
+	</scp>
+    </target>
+</project>
