@@ -1,0 +1,97 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "faac324344d34889eb9a3d0ee8219669",
+    "packages": [
+        {
+            "name": "apple/apple",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "/media/sf_geofront/dev_pug/git_repo/apple",
+                "reference": "2329290beefa698208cafa73cda877eb55992697"
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Apple": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jobs",
+                    "email": "jobs@apple.com",
+                    "homepage": "http://jobs.apple.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Apple",
+            "homepage": "http://www.apple.com/",
+            "keywords": [
+                "apple",
+                "mac"
+            ],
+            "time": "2014-01-09 11:52:02"
+        },
+        {
+            "name": "linux/linux",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "/media/sf_geofront/dev_pug/git_repo/linux",
+                "reference": "ca72bd3124078062414034c17748282c7b8363bf"
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Linux": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Torvalds",
+                    "email": "torvalds@linux.com",
+                    "homepage": "http://torvalds.linux.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Linux",
+            "homepage": "http://www.linux.com/",
+            "keywords": [
+                "linux",
+                "ubuntu"
+            ],
+            "time": "2014-01-08 15:38:23"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "linux/linux": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
