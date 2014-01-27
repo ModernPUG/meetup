@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>002z</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "002c" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "003" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+                                     용어
+  
+  * 가비지(Garbage)
+    - 동적 할당한 메모리 중 필요없어진 것
+  
+  * 가비지 콜렉션(Garbage Collection)
+    - 가비지를 Free 메모리로 반환(해제)하는 것
+  
+  * 메모리 누수(Memory Leak)
+    - 가비지가 반환되지 않고 계속 남아있는 것
+
+
+
+
+
+
+
+
+
+</pre>
+</body>

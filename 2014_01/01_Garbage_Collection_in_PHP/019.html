@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>019</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "018" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "020" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+
+
+
+                                알고리즘 #4
+  
+  * 다시 깊이 우선 탐색으로 refcount 조사
+  * refcount가 0 이면 WHITE로 표시
+  * refcount가 0 보다 크면 깊이 우선 탐색으로 refcount를 다시 1 증가 시키고 BLACK으로 표시
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
