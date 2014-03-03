@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>008.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "007" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "009.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                                                                       Interface
+  
+  &lt;?php
+  interface MeleeClass
+  {
+      public function hit();
+  }
+  
+  interface RangeClass
+  {
+      public function shoot();
+  }
+  
+  interface MagicClass
+  {
+      public function cast();
+  }
+  
+  class Paladin implements MeleeClass, MagicClass
+  {
+      public function hit()
+      {
+          echo &quot;Hit\n&quot;;
+      }
+  
+      public function cast()
+      {
+          echo &quot;Cast\n&quot;;
+      }
+  }
+  
+  class Druid implements MeleeClass, RangeClass, MagicClass
+  {
+      public function hit()
+      {
+          echo &quot;Hit\n&quot;;
+      }
+  
+      public function shoot()
+      {
+          echo &quot;Shoot\n&quot;;
+      }
+  
+      public function cast()
+      {
+          echo &quot;Cast\n&quot;;
+      }
+  }
+  
+  $paladin = new Paladin;
+  $paladin-&gt;hit();
+  $paladin-&gt;cast();
+  
+  $druid = new Druid;
+  $druid-&gt;hit();
+  $druid-&gt;shoot();
+  $druid-&gt;cast();
+  ?&gt;
+
+
+</pre>
+</body>
