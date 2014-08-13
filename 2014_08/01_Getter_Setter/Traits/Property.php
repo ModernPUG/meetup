@@ -9,8 +9,8 @@ trait Property
      */
     private static function isCalledSelf()
     {
-        $caller = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS)[2];
-        return $caller && $caller['class'] == get_called_class();
+        $callers = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
+        return isset($callers[2]['class']) && $callers[2]['class'] == get_called_class();
     }
 
     /** @var 비공개 프로퍼티 */
