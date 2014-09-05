@@ -1,11 +1,10 @@
-생활코딩 PHP 사용자 모임 발표 자료
-==================================
+Modern PHP User Group Meetup
+============================
 
-생활코딩 PHP 사용자 모임 발표 자료입니다.
+Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브러리, 도구를 적극적으로 습득하고 알리는 목적으로 시작한 페이스북 그룹입니다.
 
-생활코딩 PHP 사용자 모임은 모든 PHP 사용자에게 열려 있습니다.
+정기적으로 매달 초 수요일에 모임을 통해 PHP 관련 정보를 공유하고 있습니다.
 
-참가 신청은 페이스북 생활코딩 그룹 또는 Modern PHP 그룹을 통해서 하실 수 있습니다.
+모임 참가 신청은 페이스북 그룹 - Modern PHP를 통해 하실 수 있습니다.
 
- * [생활 코딩](https://www.facebook.com/groups/codingeverybody/)
  * [Modern PHP](https://www.facebook.com/groups/modernpug/)
