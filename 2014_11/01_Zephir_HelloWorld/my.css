@@ -1,0 +1,41 @@
+.reveal h1 {
+	font-size:3em;
+	letter-spacing: -3px;
+}
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+	font-family: "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 200;
+}
+.reveal section img {
+	background:transparent;
+	border:0;
+	box-shadow:none;
+	margin:5px 0;
+	max-height:700px;
+}
+
+.reveal ul > li {
+	position:relative;
+	list-style:none;
+	line-height:1.5;
+}
+
+.reveal ul > li::before {
+	display:block;
+	width:1px;height:17px;
+	background:#fff;
+	position:absolute;
+	left:-15px;
+	top:15px;
+	content:"";
+}
+
+
+.reveal ul > li > strong {
+	color:#7BB8E2;
+	font-weight:normal;
+}
+
+.reveal pre code {
+	max-height: none;
+}
