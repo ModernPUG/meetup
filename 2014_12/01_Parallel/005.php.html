@@ -1,0 +1,96 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "004z" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "006.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeydown="return navigate(event)">
+<div style="border-style: solid ; border-width: 2px ; font-size: x-large">
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                          run()
+
+  &lt;?php
+
+  use KzykHys\Parallel\Parallel;
+
+  require __DIR__.&quot;/vendor/autoload.php&quot;;
+
+  $parallel = new Parallel();
+  $parallel-&gt;run(
+      [
+          function () {
+              for ($i = 0; $i &lt; 5; $i++) {
+                  echo &quot;task#1 start\n&quot;;
+                  sleep(2);
+                  echo &quot;task#1 end\n&quot;;
+              }
+          },
+          function () {
+              for ($i = 0; $i &lt; 5; $i++) {
+                  echo &quot;\ttask#2 start\n&quot;;
+                  sleep(3);
+                  echo &quot;\ttask#2 end\n&quot;;
+              }
+          }
+      ]
+  );
+
+  echo &quot;Done\n&quot;;
+  ?&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+<br>
+<div style="font-size: small">
+<p></p>
+</div>
+</body>
+</html>

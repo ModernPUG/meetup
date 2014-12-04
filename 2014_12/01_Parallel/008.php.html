@@ -1,0 +1,96 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "007.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "009.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeydown="return navigate(event)">
+<div style="border-style: solid ; border-width: 2px ; font-size: x-large">
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                          map()
+
+  &lt;?php
+
+  use KzykHys\Parallel\Parallel;
+
+  require __DIR__.&quot;/vendor/autoload.php&quot;;
+
+  function sum($n)
+  {
+      $sum = 0;
+
+      for ($i = 1; $i &lt;= $n; $i++) {
+          $sum += $i;
+      }
+
+      return $sum;
+  }
+
+  $parallel = new Parallel();
+  $values = $parallel-&gt;map(
+      [10000000, 30000000, 50000000],
+      'sum'
+  );
+
+  var_dump($values);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+<br>
+<div style="font-size: small">
+<p></p>
+</div>
+</body>
+</html>
