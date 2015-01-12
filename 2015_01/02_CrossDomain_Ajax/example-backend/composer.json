@@ -1,0 +1,10 @@
+{
+    "require": {
+        "slim/slim": "2.*"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Pug\\Example\\" : "src/"
+        }
+    }
+}
