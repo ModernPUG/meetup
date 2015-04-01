@@ -1,10 +1,11 @@
 # 에러 핸들링
 ## [에러핸들링 함수](http://php.net/manual/en/ref.errorfunc.php)
-debug_backtrace - 디버깅
-debug_print_backtrace - 디버깅
-error_get_last — 디버깅
-error_log — 로그
-error_reporting — 로그
+- debug_backtrace - 디버깅
+- debug_print_backtrace - 디버깅
+- error_get_last — 디버깅
+
+- error_log — 로그
+- error_reporting — 로그
 
 - set_error_handler — **에러 핸들링**
 - restore_error_handler — **에러 핸들링**
