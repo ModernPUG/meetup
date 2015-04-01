@@ -6,13 +6,13 @@ error_get_last — 디버깅
 error_log — 로그
 error_reporting — 로그
 
-set_error_handler — **에러 핸들링**
-restore_error_handler — **에러 핸들링**
+- set_error_handler — **에러 핸들링**
+- restore_error_handler — **에러 핸들링**
 
-set_exception_handler — **에러 핸들링**
-restore_exception_handler — **에러 핸들링**
+- set_exception_handler — **에러 핸들링**
+- restore_exception_handler — **에러 핸들링**
 
-trigger_error(user_error) — **에러 핸들링**
+- trigger_error(user_error) — **에러 핸들링**
 
 ## 디버깅, 로깅, 에러 핸들링
 
