@@ -28,10 +28,10 @@
 ### 에러 핸들링
 - 에러와 예외가 발생했을 경우, 이를 전담해서 처리하도록 한다.
 - 로깅과 디버깅은 에러가 발생했을 때, 필요한 경우에 추가 정보를 확인할 수 있는 유용한 도구이다.
-- 현재 PHP에서는 error 와 exception 이라는 두가지 오류 형태를 관리한다.
+- 현재 PHP 에서는 error 와 exception 이라는 두가지 오류 형태를 관리한다.
 
 #### 에러와 예외 처리
-php 에서는 두가지 형태의 오류를 핸들링한다.
+php 에서는 에러와 예외 라는 형태의 오류를 핸들링한다.
 
 ##### 에러
 - set_error_handler()
@@ -47,15 +47,26 @@ php 에서는 두가지 형태의 오류를 핸들링한다.
 두가지 형태의 오류를 제어하기는 두배의 노력이 필요하다.
 우리는 이 것을 하나의 형태로 줄임으로써 로직을 단순화 하고, 필요한 관심을 줄일 것이다.
 
-[error handler](error_handler/error_handler.php)
+### Practice
 
+http://javierferrer.me/exceptions-vs-error-codes/
+
+#### 에러 코드를 리턴하는 방법
+- 리턴 코드 -1, -2, -3 ...
+- 핸들링 하는 부분은 `if/elseif/elseif/elseif/.../else` 혹은 `switch-case` 뭉치들
+##### 문제점
+- 읽기 힘들다.
+- 변경시 중복되는 에러 핸들링을 모두 확인하고 고쳐야 한다. (-1 을 -1001로 변경한다면?)
+
+#### 에러 코드 숫자를 의미 있는 상수로 정의
+- 읽기 조금 좋아졌다.
 
 
 ### See also
 
 ![http://www.somethingofthatilk.com/index.php?id=202](http://www.somethingofthatilk.com/comics/202.jpg)
 
-![pokemon excepton handling](http://icetea09.com/wp-content/uploads/2014/05/exception-example.jpg)
+![pokemon exception handling](http://icetea09.com/wp-content/uploads/2014/05/exception-example.jpg)
 포켓몬 예외 핸들링 (뽑아서 뭐가 나올지 모른다!)
 
 http://c2.com/cgi/wiki?PokemonExceptionHandling
