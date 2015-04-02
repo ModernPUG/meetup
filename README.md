@@ -8,3 +8,8 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 모임 참가 신청은 페이스북 그룹 - Modern PHP를 통해 하실 수 있습니다.
 
  * [Modern PHP](https://www.facebook.com/groups/modernpug/)
+ 
+ ##발표자료 목록##
+ ###[2015년 4월](https://github.com/ModernPUG/meetup/tree/master/2015_04)###
+ * [Codeception 훑어보기](https://github.com/ModernPUG/meetup/tree/master/2015_04/Codeception)
+ * [에러 핸들링](https://github.com/ModernPUG/meetup/tree/master/2015_04/Error_Handling)
