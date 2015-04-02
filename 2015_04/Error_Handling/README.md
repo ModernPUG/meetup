@@ -54,6 +54,7 @@ http://javierferrer.me/exceptions-vs-error-codes/
 #### 에러 코드를 리턴하는 방법
 - 리턴 코드 -1, -2, -3 ...
 - 핸들링 하는 부분은 `if/elseif/elseif/elseif/.../else` 혹은 `switch-case` 뭉치들
+
 ##### 문제점
 - 읽기 힘들다.
 - 변경시 중복되는 에러 핸들링을 모두 확인하고 고쳐야 한다. (-1 을 -1001로 변경한다면?)
@@ -61,6 +62,7 @@ http://javierferrer.me/exceptions-vs-error-codes/
 #### 에러 코드 숫자를 의미 있는 상수로 정의
 - 읽기 조금 좋아졌다.
 - 코드 변경시 좀 더 유연하게 대처가능하다.
+
 ##### 문제점
 - 내부 코드를 extract method 하거나, 메소드가 계층적으로 호출될 때 마다, 에러값을 고려하고 핸들링 해야 한다.
 
@@ -69,6 +71,7 @@ http://javierferrer.me/exceptions-vs-error-codes/
 `throw new \RuntimeException("Invalid credentials", self::INVALID_LOGIN_CREDENTIALS);`
 - 에러 코드를 호출 스택 마다 전달해 줘야 하는 문제가 사라졌다.
 - 어디서든 필요한 시점에 예외를 처리하면 된다.
+
 ##### 문제점
 - 포켓몬 예외 핸들링 !
 - 모든 RuntimeException 을 catch 한다.
@@ -77,6 +80,7 @@ http://javierferrer.me/exceptions-vs-error-codes/
 
 #### 원하는 예외가 아닐 경우, 다시 throw 하도록 변경
 - 관련한 코드가 아닐 경우, 예외를 핸들링 할 기회를 다시 부여했기 때문에 문제가 해결되었다.
+
 ##### 문제점
 - 에러 코드값의 중복이 발생할 경우 로직의 충돌이 발생할 우려가 있다.
 - Semantics : 코드상의 의미가 불분명해 질 수 있다. (RuntimeException 의 파라미터로 분기하므로)
@@ -84,6 +88,7 @@ http://javierferrer.me/exceptions-vs-error-codes/
 #### RuntimeException 을 상속받는 특정 케이스의 Exception 을 생성한다.
 - 각 케이스 마다 Exception Class 를 생성하여 로직상 명확하고 의미가 분명해 졌다.
 - 각각의 catch 로 처리할 수 있으니 명확하고 충돌이 발생할 수 없다.
+
 ##### 문제점
 - OCP 위반
 - switch-case 구문에서 냄새가 난다. (code smell)
@@ -94,6 +99,7 @@ http://javierferrer.me/exceptions-vs-error-codes/
 #### abstract class 로 중복을 제거한다.
 - 메시지와 코드를 각 클래스 내에서 처리했다.
 - 공통적으로 InvalidLoginException 의 처리를 하도록 해서 불필요한 중복을 없앴다.
+
 ##### 문제점
 - 에러를 처리하는 문제는 깔끔해 졌지만, 하나의 메소드에 너무 많은 로직이 들어있다.
 
@@ -110,6 +116,7 @@ http://javierferrer.me/exceptions-vs-error-codes/
 ![http://www.somethingofthatilk.com/index.php?id=202](http://www.somethingofthatilk.com/comics/202.jpg)
 
 ![pokemon exception handling](http://icetea09.com/wp-content/uploads/2014/05/exception-example.jpg)
+
 포켓몬 예외 핸들링 (뽑아서 뭐가 나올지 모른다!)
 
 http://c2.com/cgi/wiki?PokemonExceptionHandling
