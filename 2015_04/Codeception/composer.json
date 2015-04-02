@@ -1,0 +1,20 @@
+{
+  "require": {
+    "illuminate/database": "~5.0",
+    "illuminate/console": "~5.0",
+    "illuminate/events": "~5.0",
+    "illuminate/filesystem": "~5.0"
+  },
+  "require-dev": {
+    "codeception/codeception": "2.1.*@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "classes/",
+      "": "classes/"
+    },
+    "files": [
+      "setup.php"
+    ]
+  }
+}
