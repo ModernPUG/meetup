@@ -13,7 +13,7 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 #### 2015년 6월 ####
 PSR-7 (전창완)
 
-UTF-8 in PHP (전춘기)
+[UTF-8 in PHP (전춘기)](https://github.com/ModernPUG/meetup/tree/master/2015_06/02_UTF8_in_PHP)
 
 PHP 사용기 (구준호)
 
