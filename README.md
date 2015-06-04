@@ -10,7 +10,19 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
  * [Modern PHP](https://www.facebook.com/groups/modernpug/)
  
 ## 발표자료 목록 ##
-#### 2015년 4월 ####
-Codeception 훑어보기
+#### 2015년 6월 ####
+PSR-7 (전창완)
 
-에러 핸들링
+UTF-8 in PHP (전춘기)
+
+PHP 사용기 (구준호)
+
+phpstorm xdebug 설정 방법 (안정수)
+
+#### 2015년 5월 ####
+Mockery, Reflection, 성공적 (전창완)
+
+#### 2015년 4월 ####
+Codeception 훑어보기 (이현석)
+
+에러 핸들링 (김태일)
