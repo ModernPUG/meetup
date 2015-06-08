@@ -17,10 +17,10 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 [phpstorm xdebug 설정 방법 (안정수)](http://www.slideshare.net/findstar/phpstorm-remote-xdebug-setting)
 
-#### 2015년 5월 ####
-[Mockery, Reflection, 성공적 (전창완)](https://github.com/ModernPUG/meetup/tree/master/2015_05/01_Mockery_Reflection_Successful)
+![PSR-7](https://lh3.googleusercontent.com/k67nKU8XhzoLcQ6aH-ym5DvpQRMiBnBh9CvMf76oO_0=s737-no)
 
-#### 2015년 4월 ####
-[Codeception 훑어보기 (이현석)](https://github.com/ModernPUG/meetup/tree/master/2015_04/Codeception)
+![UTF-8 in PHP](https://lh3.googleusercontent.com/uh_mbAXRbQA0U9ElM-Gd6pD5UxhzKRMAN12kfR-LFiE=s737-no)
 
-[에러 핸들링 (김태일)](https://github.com/ModernPUG/meetup/tree/master/2015_04/Error_Handling)
+![PHP 사용기](https://lh3.googleusercontent.com/Kvh04hSBLOCjGJS_N1SHCYvXrUUn4Lj-Le1P9jqbN2A=w553-h737-no)
+
+![Xdebug setting](https://lh3.googleusercontent.com/nnA6XCDQrDV6waU6SoyarW1mVP-Z0rbHP9_qLOrYi5M=s737-no)
