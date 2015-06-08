@@ -15,7 +15,7 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 [UTF-8 in PHP (전춘기)](https://github.com/ModernPUG/meetup/tree/master/2015_06/02_UTF8_in_PHP)
 
-phpstorm xdebug 설정 방법 (안정수)
+[phpstorm xdebug 설정 방법 (안정수)](http://www.slideshare.net/findstar/phpstorm-remote-xdebug-setting)
 
 #### 2015년 5월 ####
 [Mockery, Reflection, 성공적 (전창완)](https://github.com/ModernPUG/meetup/tree/master/2015_05/01_Mockery_Reflection_Successful)
