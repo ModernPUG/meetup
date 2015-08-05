@@ -38,19 +38,16 @@
 ![main-menu](resource/main-menu.png)
 
 ### 네비게이션 바
-- 그림
+![navigation](resource/navigation.png)
 
 ### 상태바
-- 그림
+![status](resource/status.png)
 
 ### 에디터
-
-   
-image:: uml/uml.png
-
+![editor](resource/editor.png)
 
 ### 마이스크린
-- 그림
+![my-screen](resource/my-screen.png)
 
 
 
