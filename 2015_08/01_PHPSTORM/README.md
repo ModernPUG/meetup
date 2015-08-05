@@ -50,4 +50,7 @@
 ![my-screen](resource/my-screen.png)
 
 
+## 팁
 
+### 단축키
+- Cmd + Shift + A
