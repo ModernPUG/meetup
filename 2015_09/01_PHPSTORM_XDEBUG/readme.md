@@ -48,3 +48,7 @@ https://confluence.jetbrains.com/display/PhpStorm/Validating+Your+Debugging+Conf
 설치 : https://confluence.jetbrains.com/display/PhpStorm/Xdebug+Installation+Guide
 
 윈도우 설명 : https://www.jetbrains.com/phpstorm/help/debug-tool-window.html
+
+동영상 1 : https://www.youtube.com/watch?v=-Z_7ShOI16M&list=PLQ176FUIyIUbfeFz-2EbDzwExRlD0Bc-w&index=11
+
+동영상 2 : https://www.youtube.com/watch?v=rqDDJfG6ip4&list=PLQ176FUIyIUbfeFz-2EbDzwExRlD0Bc-w&index=13
