@@ -1,0 +1,14 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="./phpunit.php"
+         processIsolation="false"
+         syntaxCheck="false"
+         stopOnFailure="false"
+         colors="true"
+        >
+    <testsuites>
+        <testsuite name="Pug150502 Samples Suites">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

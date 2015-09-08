@@ -1,0 +1,23 @@
+{
+    "name": "wani/pug-150502-ppt",
+    "authors": [
+        {
+            "name": "Changwan Jun",
+            "email": "me@wani.kr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Wandu\\PugSample\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wandu\\PugSample\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.5.*",
+        "mockery/mockery": "0.9.*"
+    }
+}
