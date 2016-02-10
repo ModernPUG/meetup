@@ -19,5 +19,12 @@ PHP로 만든 테트리스
 $ php tetris.php
 ```
 
+### 게임 방법
+- A키: 좌로 이동
+- D키: 우로 이동
+- S키: 내리기
+- W키: 회전
+- Q키, ESC키: 종료
+
 ### 동영상 미리보기
 [![PHP Tetris Youtube](http://img.youtube.com/vi/NSJ8n_PlWHQ/0.jpg)](https://youtu.be/NSJ8n_PlWHQ)
