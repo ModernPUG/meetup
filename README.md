@@ -10,6 +10,10 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
  * [Modern PHP](https://www.facebook.com/groups/655071604594451/)
  
 ## 발표자료 목록 ##
+
+#### 2016년 5월 ####
+[팀장들이 꼽은 신입 PHP 개발자가 가급적 빨리 알았으면 하는 것들(이현석)](/2016_05/02_survey_for_newbie_book)
+
 #### 2015년 6월 ####
 [PSR-7 (전창완)](https://github.com/ModernPUG/meetup/tree/master/2015_06/01_talking_about_PSR7)
 
