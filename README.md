@@ -26,9 +26,9 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 - [PHP Tetris (박민권)](/2016_02/03_PHP_Tetris)
 
 #### 2016년 1월 ####
-- [Envoy를 이용한 코드배포 (김주원)](/2016_01)
-- [오픈소스 CI 하자 (전창완)](/2016_01)
-- [라라벨 모듈화 (구준호)](/2016_01)
+- [Envoy를 이용한 코드배포 (김주원)](/2016_01/01_ENVOY.MD)
+- [오픈소스 CI 하자 (전창완)](/2016_01/02_OPEN_SOURCE_CI.pdf)
+- [라라벨 모듈화 (구준호)](/2016_01/03_LARAVEL_MODULARIZATION.MD)
 
 #### 2015년 6월 ####
 - [PSR-7 (전창완)](https://github.com/ModernPUG/meetup/tree/master/2015_06/01_talking_about_PSR7)
