@@ -8,8 +8,12 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 모임 참가 신청은 페이스북 그룹 - Modern PHP를 통해 하실 수 있습니다.
 
  * [Modern PHP](https://www.facebook.com/groups/655071604594451/)
- 
+
 ## 발표자료 목록 ##
+
+#### 2016년 8월 ####
+- [REST 개요 (이현석)](/2016_08/01_REST_Intro)
+- [RESTful URL 설계 모범사례 (김주원)](/2016_08/02_RESTful_URL)
 
 #### 2016년 7월 ####
 - [jsonmapper - annotation 기반으로 Json 처리하기 (정광섭)](https://www.lesstif.com/pages/viewpage.action?pageId=23757302)
