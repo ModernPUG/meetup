@@ -17,6 +17,7 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 #### 2016년 7월 ####
 - [jsonmapper - annotation 기반으로 Json 처리하기 (정광섭)](https://www.lesstif.com/pages/viewpage.action?pageId=23757302)
+- [PHP에서 빠르게 GCM 푸시 보내기(feat. Async / Generator)](http://www.slideshare.net/wan2land/php-gcm-feat-async-generator)
 
 #### 2016년 6월 ####
 - [서버 아키텍처 이해를 위한 Process/Thread Model (정광섭)](http://www.slideshare.net/ssuser800974/ss-62605746)
