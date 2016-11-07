@@ -16,6 +16,7 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 - [Wandu Validator (전창완)](/2016_11/02_Wandu_Validator)
 
 #### 2016년 10월 ####
+- [PHP와 함께한 개발 성장기 (박종훈)](/2016_10/01_story_of_growth_with_php)
 
 #### 2016년 9월 ####
 - [VSTS (박민권)](/2016_09/01_VSTS)
