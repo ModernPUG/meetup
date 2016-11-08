@@ -17,6 +17,7 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 #### 2016년 10월 ####
 - [PHP와 함께한 개발 성장기 (박종훈)](/2016_10/01_story_of_growth_with_php)
+- [Confluence wiki 를 활용한 공유와 협업 (정광섭)](/2016_10/02_collaboration_with_confluence)
 
 #### 2016년 9월 ####
 - [VSTS (박민권)](/2016_09/01_VSTS)
