@@ -12,6 +12,10 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 ## 발표자료 목록 ##
 
 #### 2016년 11월 ####
+- sonatype nexus 로 docker registry 관리하기 (정광섭)
+- [PHP로 Slack Bot 만들기 (전창완)](/2016_12/02_PHP_Slack_Bot.md)
+
+#### 2016년 11월 ####
 - [Laravel Scout (안정수)](/2016_11/01_Laravel_Scout)
 - [Wandu Validator (전창완)](/2016_11/02_Wandu_Validator)
 
