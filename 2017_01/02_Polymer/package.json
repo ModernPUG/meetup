@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@polymer/polymer": "https://github.com/Polymer/polymer.git",
+    "Polymer": "^1.6.1--",
+    "jquery": "^3.1.1",
+    "webcomponents.js": "^0.7.23"
+  }
+}

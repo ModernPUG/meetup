@@ -1,0 +1,88 @@
+<dom-module id="x-progress">
+    <template>
+        <style>
+        :host div {
+            border-radius: .25rem;
+            margin: 1em 0;
+        }
+
+        #box {
+            background-color: #f7f7f7;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+        }
+
+        #bar {
+            min-height: 1.8em;
+            line-height: 1.8em;
+            font-size: 1em;
+            font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            background-color: #4496d1;
+            width: 0%;
+        }
+        #bar strong {
+            display: inline-block;
+            margin-left: .5em;
+            color: #fff;
+        }
+        </style>
+
+        <div id="box">
+            <div id="bar"><strong>{{label}}%</strong></div>
+        </div>
+    </template>
+
+    <script>
+    (function () {
+        let _value = 0;
+
+        Polymer({
+            is: 'x-progress',
+
+            properties: {
+                label: {
+                    type: Number,
+                    value: 0,
+                    readOnly: true
+                },
+            },
+
+            set value (newValue) {
+                newValue = parseInt(newValue);
+
+                if (newValue < 0) {
+                    newValue = 0;
+                } else if (newValue > 100) {
+                    newValue = 100;
+                }
+
+                if (_value == newValue) {
+                    return;
+                }
+
+                var self = this;
+                var bar = this.$$('#bar');
+
+                var oldValue = _value;
+                _value = newValue;
+
+                $(bar).css({
+                    width: oldValue + '%'
+                }).animate({
+                    width: newValue + '%'
+                }, {
+                    step: function (now) {
+                        self._setLabel(parseInt(now));
+                    }
+                });
+            },
+            get value () {
+                return _value;
+            },
+
+            ready: function () {
+                this.value = this.getAttribute('value');
+            }
+        });
+    })();
+    </script>
+</dom-module>
