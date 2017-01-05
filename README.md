@@ -11,6 +11,22 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 ## 발표자료 목록 ##
 
+#### 2016년 11월 ####
+- sonatype nexus 로 docker registry 관리하기 (정광섭)
+- [PHP로 Slack Bot 만들기 (전창완)](/2016_12/02_PHP_Slack_Bot.md)
+
+#### 2016년 11월 ####
+- [Laravel Scout (안정수)](/2016_11/01_Laravel_Scout)
+- [Wandu Validator (전창완)](/2016_11/02_Wandu_Validator)
+
+#### 2016년 10월 ####
+- [PHP와 함께한 개발 성장기 (박종훈)](/2016_10/01_story_of_growth_with_php)
+- [Confluence wiki 를 활용한 공유와 협업 (정광섭)](/2016_10/02_collaboration_with_confluence)
+
+#### 2016년 9월 ####
+- [VSTS (박민권)](/2016_09/01_VSTS)
+- [라라벨 API 서비스 설계 구성 경험 (안정수)](/2016_09/02_라라벨_API_서비스_설계_구성_경험)
+
 #### 2016년 8월 ####
 - [REST 개요 (이현석)](/2016_08/01_REST_Intro)
 - [RESTful URL 설계 모범사례 (김주원)](/2016_08/02_RESTful_URL)
