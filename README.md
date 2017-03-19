@@ -11,6 +11,18 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 ## 발표자료 목록 ##
 
+#### 2017년 3월 ####
+- PHP 라이브러리 만들고 컴포저로 배포하기 (정광섭)
+- Aapache Thrift와 RPC (김주원)
+- [Recursion in PHP (주영익)](/2017_03/03_Recursion_in_PHP)
+
+#### 2017년 2월 ####
+- 라라벨 scout와 elasticsearch를 이용한 검색 서비스 개발 후기 (김주원)
+
+#### 2017년 1월 ####
+- [Introduce PHP7.1 (안정수)](/2017_01/01_PHP7.1)
+- [Polymer (박민권)](/2017_01/02_Polymer)
+
 #### 2016년 12월 ####
 - [sonatype nexus 로 docker registry 관리하기 (정광섭)](https://www.slideshare.net/ssuser800974/sonatype-nexus-docker-registry)
 - [PHP로 Slack Bot 만들기 (전창완)](/2016_12/02_PHP_Slack_Bot.md)
