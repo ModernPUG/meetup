@@ -105,7 +105,7 @@ SELECT ST_Distance_Sphere(
     ST_MakeEnvelope(좌표1, 좌표2)
     ```
 
-2. ST_Within() 함수로 대상 좌표가 가격 영역에 포함되는지 확인한다.
+2. ST_Within() 함수로 대상 좌표가 사각 영역에 포함되는지 확인한다.
 
     ```sql
     ST_Within(대상 좌표, ST_MakeEnvelope(좌표1, 좌표2))
