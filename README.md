@@ -22,7 +22,7 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 #### 2017년 6월 ####
 - 워드프레스로 할 수 있는 것들 (지용화)
-- Annotation (전창완)
+- [Annotation (전창완)](https://gist.github.com/wan2land/9e3d09960fb99e6a428f29d2c4dc1864)
 - [암호화, 이것만 알면 된다! (정광섭)](https://www.slideshare.net/ssuser800974/ss-76664853?qid=24aca3fd-f1dc-4745-925e-c4ed99969dde&v=&b=&from_search=1)
 
 #### 2017년 5월 ####
