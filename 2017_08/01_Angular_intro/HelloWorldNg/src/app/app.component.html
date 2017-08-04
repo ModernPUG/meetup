@@ -1,0 +1,15 @@
+<h1>
+  {{title}}
+</h1>
+
+<!--<input type="text" name="input01" (change)="onChangeInput($event)" [value]="baz"/>-->
+<input type="text" name="input01" [(ngModel)]="baz"/>
+result :: {{baz}}
+<button (click)="changeBaz()">chagneBaz</button>
+
+
+<app-one [foo]="strTest" (oneClickEmitter)="onClickedOne( $event )"></app-one>
+<app-two></app-two>
+
+
+<span>{{foo}}</span>
