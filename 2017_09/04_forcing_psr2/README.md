@@ -105,3 +105,6 @@ Git으로 아래 파일들을 공유하면 됩니다.
 - composer.json
 - composer.lock
 - pre-commit
+
+## 기타 참고사항
+- 변경된 코드만 검사하는 것은 아니고 파일에 있는 모든 내용을 검사합니다.
