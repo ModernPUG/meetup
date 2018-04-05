@@ -1,0 +1,15 @@
+{
+    "name": "ost/2-adapter",
+    "authors": [
+        {
+            "name": "ost",
+            "email": "ost5253@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Acme\\": "src"
+        }
+    }
+}

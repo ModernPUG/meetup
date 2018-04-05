@@ -1,0 +1,15 @@
+{
+    "name": "ost/3-templae-method",
+    "authors": [
+        {
+            "name": "ost",
+            "email": "ost5253@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    }
+}
