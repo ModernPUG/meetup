@@ -1,0 +1,17 @@
+{
+    "name": "haah/no-framework",
+    "description": "An example of a modern PHP application bootstrapped without a framework.",
+    "type": "project",
+    "require": {
+        "php-di/php-di": "^6.0",
+        "relay/relay": "2.x@dev",
+        "zendframework/zend-diactoros": "^1.7",
+        "middlewares/fast-route": "^1.0",
+        "middlewares/request-handler": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "ExampleApp\\": "src/"
+        }
+    }
+}
