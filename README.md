@@ -11,6 +11,28 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 ## 발표자료 목록 ##
 
+#### 2018년 10월 ####
+
+- [Haproxy를 사용한 dos 방어존 구성하기](https://github.com/ModernPUG/meetup/blob/master/2018_10/Haproxy%20%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20DOS%20%EB%B0%A9%EC%96%B4%20%EC%82%BD%EC%A7%88%EA%B8%B0_MPU.pdf) (안정수)
+- [Elasticsearch 해킹 사건과 사후 대응](https://onedrive.live.com/view.aspx?resid=87303EBCAC1582DB!3497&ithint=file%2cpptx&app=PowerPoint&authkey=!ANhdFDRv81n0r90) (곽연준)
+- docker traefik + cloud flare = local ssl (조오성)
+- [Apache Prefork VS Worker(PHP NTS VS PHP ZTS)](https://wiki.modernpug.org/questions/25234435/apache-threaded-mpm-%2b-modphpzts%EB%A5%BC-production-%EB%A0%88%EB%B2%A8%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EB%A7%90%EB%9D%BC%EA%B3%A0-%EA%B6%8C%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0?fbclid=IwAR1AePWppKgunzbp5Ru_K6ZaKrU8OXFBHZY1sS1ewp1VDbYknffzi4RLUcI) (홍철의)
+
+#### 2018년 9월 ####
+
+- ElasticSearch with x-pack - 안정수님
+- 지니PHP 디자인패턴 - 이호진님
+- XE3.0 frontend form validation - 오승훈
+
+#### 2018년 8월 ####
+- [지니 프레임워크](http://hojin.io/) (이호진)
+
+#### 2018년 7월 ####
+
+- [Reactive programming in PHP](https://www.slideshare.net/lazyfri13th/reactive-programming-in-php?fbclid=IwAR3esc884BA0oMd6kUyegJik0GliTZYUZ8-6R2LG4LhUj-TcNha1Dla1Dm0) (박종희)
+- ElasticSearch with X-Pack (안정수)
+- ELK 로깅 플랫폼 후기 (김주원)
+
 #### 2018년 6월 ####
 - [Modern PHP Without a Framework](/2018_06) (주영익)
 
