@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>010.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "009.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "011.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                    Firebug
+  
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;body&gt;
+  &lt;?php
+  require_once 'Log.php';
+  
+  $logger = Log::singleton('firebug', '', 'factorial');
+  
+  $n = 10;
+  $factorial = 1;
+  for ($i = 1; $i &lt;= $n; $i++) {
+      $logger-&gt;log(&quot;f($i) = $factorial * $i&quot;);
+      $factorial *= $i;
+  }
+  $logger-&gt;emerg('Firebug - Emergency');
+  $logger-&gt;alert('Firebug - Alert');
+  $logger-&gt;crit('Firebug - Critical');
+  $logger-&gt;err('Firebug - Error');
+  $logger-&gt;warning('Firebug - Warning');
+  $logger-&gt;notice('Firebug - Notice');
+  $logger-&gt;info('Firebug - Information');
+  $logger-&gt;debug('Firebug - Debug');
+  
+  echo &quot;factorial($n) = $factorial\n&quot;;
+  ?&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</pre>
+</body>

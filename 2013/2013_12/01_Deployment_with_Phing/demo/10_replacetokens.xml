@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DeploymentWithPhing" default="main">
+    <property name="webservers" value="www1,www2" />
+    <property name="staticservers" value="static1,static2" />
+
+    <patternset id="phpfiles">
+	<include name="**/*.php" />
+	<exclude name="**/test*.php" />
+    </patternset>
+
+     <patternset id="staticfiles">
+	<include name="**/*.css" />
+	<include name="**/*.js" />
+    </patternset>
+
+    <reflexive>
+	<fileset dir="/Users/bookworm/workspace/sandbox/project2">
+	    <patternset refid="phpfiles" />
+	</fileset>
+	<filterchain>
+	    <replacetokens begintoken="##__" endtoken="__##">
+		<token key="MYNAME" value="bookworm" />
+	    </replacetokens>
+	</filterchain>
+    </reflexive>
+
+    <target name="main">
+	<foreach list="${webservers}" param="hostname" target="web" />
+	<foreach list="${staticservers}" param="hostname" target="static" />
+    </target>
+
+    <target name="web">
+	<phingcall target="scp">
+	    <property name="fileset_name" value="phpfiles" />
+	</phingcall>
+    </target>
+
+    <target name="static">
+	<phingcall target="scp">
+	    <property name="fileset_name" value="staticfiles" />
+	</phingcall>
+    </target>
+
+    <target name="scp">
+	<scp 
+	    username="bookworm" 
+	    host="${hostname}.local" 
+	    todir="/Users/bookworm/Sites/${hostname}/public" 
+	    pubkeyfile="~/.ssh/id_rsa.pub" 
+	    privkeyfile="~/.ssh/id_rsa"
+	>
+	    <fileset dir="/Users/bookworm/workspace/sandbox/project2">
+		<patternset refid="${fileset_name}" />
+	    </fileset>
+	</scp>
+    </target>
+</project>

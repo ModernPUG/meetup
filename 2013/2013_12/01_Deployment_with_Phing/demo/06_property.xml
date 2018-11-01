@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DeploymentWithPhing" default="main">
+    <property name="hostname" value="www1" />
+
+    <patternset id="phpfiles">
+	<include name="**/*.php" />
+	<exclude name="**/test*.php" />
+    </patternset>
+
+    <target name="main">
+	<scp 
+	    username="bookworm" 
+	    host="${hostname}.local" 
+	    todir="/Users/bookworm/Sites/${hostname}/public" 
+	    pubkeyfile="~/.ssh/id_rsa.pub" 
+	    privkeyfile="~/.ssh/id_rsa"
+	>
+	    <fileset dir="/Users/bookworm/workspace/sandbox/project2">
+		<patternset refid="phpfiles" />
+	    </fileset>
+	</scp>
+    </target>
+</project>

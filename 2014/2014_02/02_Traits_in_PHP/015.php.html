@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>015.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "014.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "016" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                                                                     Coffee Classes
+  
+  &lt;?php
+  trait Hot
+  {
+      public function temperature()
+      {
+          return 'Hot';
+      }
+  }
+  
+  trait Cold
+  {
+      public function temperature()
+      {
+          return 'Cold';
+      }
+  }
+  
+  trait Water
+  {
+      public function ingredient()
+      {
+          return 'Water';
+      }
+  }
+  
+  trait Milk
+  {
+      public function ingredient()
+      {
+          return 'Milk';
+      }
+  }
+  
+  trait SoyMilk
+  {
+      public function ingredient()
+      {
+          return 'SoyMilk';
+      }
+  }
+  
+  trait Cinnamon
+  {
+      public function topping()
+      {
+          return 'Cinnamon';
+      }
+  }
+  
+  trait Chocolate
+  {
+      public function topping()
+      {
+          return 'Chocolate';
+      }
+  }
+  
+  trait NoTopping
+  {
+      public function topping()
+      {
+          return false;
+      }
+  }
+  
+  abstract class Coffee
+  {
+      public function recipe()
+      {
+          $recipe = &quot;Esspresso, {$this-&gt;temperature()} {$this-&gt;ingredient()}&quot;;
+          if ($this-&gt;topping()) {
+              $recipe .= &quot;, {$this-&gt;topping()}&quot;;
+          }
+  
+          return $recipe;
+      }
+  }
+  
+  class Americano extends Coffee
+  {
+      use Hot, Water, NoTopping;
+  }
+  
+  class IceCafeLatte extends Coffee
+  {
+      use Cold, Milk, NoTopping;
+  }
+  
+  class Cappuccino extends Coffee
+  {
+      use Hot, Milk, Cinnamon;
+  }
+  
+  class IceCafeMocca extends Coffee
+  {
+      use Cold, Milk, Chocolate;
+  }
+  
+  $americano = new Americano;
+  echo &quot;Americano = {$americano-&gt;recipe()}\n&quot;;
+  
+  $icecafelatee = new IceCafeLatte;
+  echo &quot;Ice Cafe Latte = {$icecafelatee-&gt;recipe()}\n&quot;;
+  
+  $cappuccino =  new Cappuccino;
+  echo &quot;Cappuccino = {$cappuccino-&gt;recipe()}\n&quot;;
+  
+  $icecafemocca = new IceCafeMocca;
+  echo &quot;Ice Cafe Mocca = {$icecafemocca-&gt;recipe()}\n&quot;;
+  
+  ?&gt;
+</pre>
+</body>

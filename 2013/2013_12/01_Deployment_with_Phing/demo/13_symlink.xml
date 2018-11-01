@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DeploymentWithPhing" default="main">
+    <property name="webservers" value="www1,www2" />
+    <property name="staticservers" value="static1,static2" />
+    <property name="git_repo_dir" value="file:///Users/bookworm/workspace/sandbox/project2" />
+
+    <patternset id="phpfiles">
+	<include name="**/*.php" />
+	<exclude name="**/test*.php" />
+    </patternset>
+
+     <patternset id="staticfiles">
+	<include name="**/*.css" />
+	<include name="**/*.js" />
+    </patternset>
+
+    <target name="prepare">
+	<property name="git_target_dir" value="/tmp/tmpproject2" />
+	<available file="${git_target_dir}" property="exists_project2" />
+	<if>
+	    <equals arg1="${exists_project2}" arg2="true" />
+	    <then>
+		<delete dir="${git_target_dir}" includeemptydirs="true" failonerror="true" />
+	    </then>
+	</if>
+	<gitclone repository="${git_repo_dir}" targetPath="${git_target_dir}" />
+	<if>
+	    <not><isset property="version" /></not>
+	    <then>
+		<exec outputProperty="version" command="git describe --tags `git rev-list --tags --max-count=1`" dir="${git_target_dir}" />
+	    </then>
+	</if>
+	<fail unless="version" message="Can't get version." />
+	<echo msg="VERSION = ${version}" />
+	<exec command="git checkout ${version}" dir="${git_target_dir}" />
+
+	<reflexive>
+	    <fileset dir="${git_target_dir}">
+		<patternset refid="phpfiles" />
+	    </fileset>
+	    <filterchain>
+		<replacetokens begintoken="##__" endtoken="__##">
+		    <token key="MYNAME" value="bookworm" />
+		</replacetokens>
+	    </filterchain>
+	</reflexive>
+    </target>
+
+    <target name="main" depends="prepare">
+	<foreach list="${webservers}" param="hostname" target="web" />
+	<foreach list="${staticservers}" param="hostname" target="static" />
+	<foreach list="${staticservers},${webservers}" param="hostname" target="symlink" />
+    </target>
+
+    <target name="web">
+	<phingcall target="scp">
+	    <property name="fileset_name" value="phpfiles" />
+	</phingcall>
+    </target>
+
+    <target name="static">
+	<phingcall target="scp">
+	    <property name="fileset_name" value="staticfiles" />
+	</phingcall>
+    </target>
+
+    <target name="scp">
+	<scp 
+	    username="bookworm" 
+	    host="${hostname}.local" 
+	    todir="/Users/bookworm/Sites/${hostname}/${version}" 
+	    pubkeyfile="~/.ssh/id_rsa.pub" 
+	    privkeyfile="~/.ssh/id_rsa"
+	>
+	    <fileset dir="${git_target_dir}">
+		<patternset refid="${fileset_name}" />
+	    </fileset>
+	</scp>
+    </target>
+
+    <target name="symlink">
+	<ssh
+	    username="bookworm" 
+	    host="${hostname}.local" 
+	    pubkeyfile="~/.ssh/id_rsa.pub" 
+	    privkeyfile="~/.ssh/id_rsa"
+	    command="ln -fns /Users/bookworm/Sites/${hostname}/${version} /Users/bookworm/Sites/${hostname}/public" />
+	<ssh
+	    username="bookworm" 
+	    host="${hostname}.local" 
+	    pubkeyfile="~/.ssh/id_rsa.pub" 
+	    privkeyfile="~/.ssh/id_rsa"
+	    command="kill -USR2 `cat /usr/local/var/run/php-fpm.pid`" />
+    </target>
+</project>

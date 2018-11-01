@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>012z</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "012d" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "013" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+                                 신경 쓸 것
+  
+  * 소스 코드와 로그 파일 상호 분리
+  * 저장소와 코드 일치
+  * 서버 시각 동기화
+  * 긴급 복구 대비
+     * /var/www/hello (web root)
+     * /var/www/hello-1.0
+     * /var/www/hello-1.1 
+     * ln -fns /var/www/hello-1.1 /var/www/hello
+     * ln -fns /var/www/hello-1.0 /var/www/hello
+
+
+
+
+
+
+
+
+</pre>
+</body>

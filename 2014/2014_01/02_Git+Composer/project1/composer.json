@@ -1,0 +1,19 @@
+{
+    "repositories": [
+        {
+           "packagist": false
+        },
+        {
+            "type": "vcs",
+            "url": "/geofront/dev_pug/git_repo/apple"
+        },
+        {
+            "type": "vcs",
+            "url": "/geofront/dev_pug/git_repo/linux"
+        }
+    ],
+    "require": {
+         "apple/apple": "1.0.*",
+         "linux/linux": "dev-master"
+    }
+}

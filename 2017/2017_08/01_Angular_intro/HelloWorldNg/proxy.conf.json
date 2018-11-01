@@ -1,0 +1,6 @@
+{
+  "/api/*": {
+    "target": "http://laralabs.io/",
+    "secure": false
+  }
+}

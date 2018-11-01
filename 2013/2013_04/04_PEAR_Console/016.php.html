@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>016.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "015.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "017" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                 Custom Action
+  &lt;?php
+  
+  require_once 'Console/CommandLine.php';
+  require_once 'Console/CommandLine/Action.php';
+  
+  class ActionIP extends Console_CommandLine_Action
+  {
+      public function execute($value=false, $params=array())
+      {
+          if (self::checkip($value) == false) {
+              throw new Exception(
+                  sprintf('Option &quot;%s&quot; must be IP address', $this-&gt;option-&gt;name)
+              );
+          }
+          $this-&gt;setResult($value);
+      }
+  
+      private static function checkip($ip) {
+          if (preg_match('/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/', $ip, $matches) == false) {
+              return false;
+          }
+          array_shift($matches);
+          foreach ($matches as $part) {
+              if ($part &gt; 255 || $part &lt; 0) {
+                  return false;
+              }
+          }
+  
+          return true;
+      }
+  }
+  
+  Console_CommandLine::registerAction('StoreIP', 'ActionIP');
+  
+  $parser = new Console_CommandLine();
+  $parser-&gt;addOption('ip', array(
+      'short_name'  =&gt; '-i',
+      'long_name'   =&gt; '--ip',
+      'description' =&gt; 'IP Address',
+      'help_name'   =&gt; 'IP',
+      'action'      =&gt; 'StoreIP'
+  ));
+  
+  try {
+      $result = $parser-&gt;parse();
+  
+      print_r($result-&gt;options);
+      print_r($result-&gt;args);
+  } catch (Exception $e) {
+      $parser-&gt;displayError($e-&gt;getMessage());
+  };
+  ?&gt;
+</pre>
+</body>

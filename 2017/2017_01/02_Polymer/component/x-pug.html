@@ -1,0 +1,24 @@
+<dom-module id="x-pug">
+    <template>
+        <style>
+        :host {
+            display: inline-block;
+            border: 1px dashed #666;
+            padding: 0 4px;
+        }
+        </style>
+
+        <span>{{message}}</span>
+    </template>
+
+    <script>
+    Polymer({
+        is: 'x-pug',
+        properties: {
+            message: {
+                type: String
+            }
+        }
+    });
+    </script>
+</dom-module>

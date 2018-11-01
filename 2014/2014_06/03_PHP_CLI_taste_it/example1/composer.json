@@ -1,0 +1,5 @@
+{
+	"require-dev": {
+		"elfet/deployer": "v0.4.2"
+	}
+}

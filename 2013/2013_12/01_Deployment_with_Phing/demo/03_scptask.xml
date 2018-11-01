@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DeploymentWithPhing" default="main">
+    <target name="main">
+	<scp 
+	    username="bookworm" 
+	    host="www1.local" 
+	    todir="/Users/bookworm/Sites/www1/public" 
+	    file="/Users/bookworm/workspace/sandbox/project1/index.php" 
+	    pubkeyfile="~/.ssh/id_rsa.pub" 
+	    privkeyfile="~/.ssh/id_rsa" 
+	/>
+    </target>
+</project>

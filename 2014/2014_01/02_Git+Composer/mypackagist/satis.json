@@ -1,0 +1,9 @@
+{
+    "name": "My Repository",
+    "homepage": "http://dev",
+    "repositories": [
+        { "type": "vcs", "url": "/geofront/dev_pug/git_repo/apple" },
+        { "type": "vcs", "url": "/geofront/dev_pug/git_repo/linux" }
+    ],
+    "require-all": true
+}

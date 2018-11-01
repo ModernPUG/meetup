@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>047.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "046" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "048" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+                                                                     SplObjectStorage #5
+  
+  &lt;?php
+  
+  $obj1 = new StdClass;
+  $obj1-&gt;name = 'Thrall';
+  $obj2 = new StdClass;
+  $obj2-&gt;name = 'Sylvanas';
+  $obj3 = new StdClass;
+  $obj3-&gt;name = 'Cairne';
+  $obj4 = new StdClass;
+  $obj4-&gt;name = 'Voljin';
+  
+  $sos = new SplObjectStorage();
+  
+  $sos-&gt;attach($obj1, 'Orc');
+  $sos-&gt;attach($obj2, 'Undead');
+  $sos-&gt;attach($obj3, 'Tauren');
+  $sos-&gt;attach($obj4, 'Troll');
+  
+  $obj5 = new StdClass;
+  $obj5-&gt;name = 'Voljin';
+  
+  foreach ($sos as $obj) {
+      echo $obj-&gt;name, &quot; - &quot;, $sos-&gt;getHash($obj), &quot;\n&quot;;
+  }
+  
+  var_dump($sos-&gt;contains($obj4));    // 볼진이 있다
+  var_dump($sos-&gt;contains($obj5));    // 이름만 볼진
+  
+  ?&gt;
+
+
+
+
+
+</pre>
+</body>

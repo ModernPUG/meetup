@@ -1,0 +1,15 @@
+{
+    "repositories": [
+        {
+           "packagist": false
+        },
+        {
+            "type": "composer",
+            "url": "http://dev"
+        }
+    ],
+    "require": {
+         "apple/apple": "1.0.*",
+         "linux/linux": "dev-master"
+    }
+}

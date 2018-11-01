@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>018</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "017" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "019" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+
+
+
+                                알고리즘 #3
+  
+  * root buffer에 모인 zval은 PURPLE
+  * 깊이 우선 탐색으로 발견한 zval의 refcount를 1 감소
+  * 감소한 zval은 GREY (중복 방지)
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>

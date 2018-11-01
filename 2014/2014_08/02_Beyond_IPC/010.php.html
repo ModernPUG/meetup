@@ -1,0 +1,68 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "009" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "011.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeydown="return navigate(event)">
+<div style="border-style: solid ; border-width: 2px ; font-size: x-large">
+<pre>                                     Mutex
+
+  &lt;?php
+
+  $marks = array('#', '*');
+
+  $mutex = new SyncMutex('foobar');
+
+  for ($i = 0; $i &lt; 2; $i++) {
+      $mark = array_shift($marks);
+      $pid = pcntl_fork();
+      if ($pid) {
+          continue;
+      }
+
+      // child
+      $pid = posix_getpid();
+      for ($j = 0; $j &lt; 10; $j++) {
+          $mutex-&gt;lock();
+          echo &quot;$mark$i&quot;;
+          usleep(mt_rand(1, 1000));
+          echo &quot;$mark\n&quot;;
+          $mutex-&gt;unlock();
+          usleep(mt_rand(1, 100));
+      }
+      break;
+  }
+
+  for ($i = 0; $i &lt; 2; $i++) {
+      pcntl_waitpid(-1, $status);
+  }
+
+  ?&gt;
+</pre>
+</div>
+<br>
+<div style="font-size: small">
+<p></p>
+</div>
+</body>
+</html>

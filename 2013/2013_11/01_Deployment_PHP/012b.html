@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>012b</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "012" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "012c" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+                                 신경 쓸 것
+  
+  * 소스 코드와 로그 파일 상호 분리
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>

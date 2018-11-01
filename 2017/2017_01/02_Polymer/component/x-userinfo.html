@@ -1,0 +1,55 @@
+<dom-module id="x-userinfo">
+    <template>
+        <style>
+        :host {
+            display: block;
+            width: 200px;
+            margin-top: 1em;
+            border: 1px solid #eee;
+            border-radius: .25rem;
+            padding: 10px 20px;
+            box-shadow: 1px 1px 2px rgb(0, 0, 0, .5);
+        }
+
+        #desc {
+            margin: 10px 0 0 5px;
+        }
+        </style>
+
+        <table>
+            <tr>
+                <th>이름</th>
+                <td>{{user.name}}</td>
+            </tr>
+            <tr>
+                <th>나이</th>
+                <td>{{user.age}}</td>
+            </tr>
+            <tr>
+                <th>성별</th>
+                <td>{{user.gender}}</td>
+            </tr>
+        </table>
+        <div id="desc">
+            <content></content>
+        </div>
+    </template>
+
+    <script>
+    Polymer({
+        is: 'x-userinfo',
+        properties: {
+            user: {
+                type: Object,
+                value: function () {
+                    return {
+                        name: '익명',
+                        age: '0',
+                        gender: '모름',
+                    };
+                }
+            }
+        }
+    });
+    </script>
+</dom-module>

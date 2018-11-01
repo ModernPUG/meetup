@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>006.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "005.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "007.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                   Log Levels
+  
+  &lt;?php
+  
+  require_once 'Log.php';
+  
+  $logger = Log::singleton('file', 'levels.log', 'factorial', null, PEAR_LOG_ERR);
+  
+  $logger-&gt;log('Step 1 - Emergency',   PEAR_LOG_EMERG);   // System is unusable
+  $logger-&gt;log('Step 1 - Alert',       PEAR_LOG_ALERT);   // Immediate action required
+  $logger-&gt;log('Step 1 - Critical',    PEAR_LOG_CRIT);    // Critical conditions
+  $logger-&gt;log('Step 1 - Error',       PEAR_LOG_ERR);     // Error conditions
+  $logger-&gt;log('Step 1 - Warning',     PEAR_LOG_WARNING); // Warning conditions
+  $logger-&gt;log('Step 1 - Notice',      PEAR_LOG_NOTICE);  // Normal but significant
+  $logger-&gt;log('Step 1 - Information', PEAR_LOG_INFO);    // Informational
+  $logger-&gt;log('Step 1 - Debug',       PEAR_LOG_DEBUG);   // Debug-level messages
+  
+  $mask = Log::MASK(PEAR_LOG_WARNING) | Log::MAX(PEAR_LOG_CRIT) | 
+      Log::MIN(PEAR_LOG_INFO);
+  $logger-&gt;setMask($mask);
+  
+  $logger-&gt;emerg('Step 2 - Emergency');
+  $logger-&gt;alert('Step 2 - Alert');
+  $logger-&gt;crit('Step 2 - Critical');
+  $logger-&gt;err('Step 2 - Error');
+  $logger-&gt;warning('Step 2 - Warning');
+  $logger-&gt;notice('Step 2 - Notice');
+  $logger-&gt;info('Step 2 - Information');
+  $logger-&gt;debug('Step 2 - Debug');
+  
+  $mask = PEAR_LOG_ALL ^ Log::MASK(PEAR_LOG_WARNING);
+  $logger-&gt;setMask($mask);
+  
+  $logger-&gt;emerg('Step 3 - Emergency');
+  $logger-&gt;alert('Step 3 - Alert');
+  $logger-&gt;crit('Step 3 - Critical');
+  $logger-&gt;err('Step 3 - Error');
+  $logger-&gt;warning('Step 3 - Warning');
+  $logger-&gt;notice('Step 3 - Notice');
+  $logger-&gt;info('Step 3 - Information');
+  $logger-&gt;debug('Step 3 - Debug');
+  
+  $mask = $logger-&gt;getMask() | Log::MASK(PEAR_LOG_WARNING);
+  $logger-&gt;setMask($mask);
+  
+  $logger-&gt;emerg('Step 4 - Emergency');
+  $logger-&gt;alert('Step 4 - Alert');
+  $logger-&gt;crit('Step 4 - Critical');
+  $logger-&gt;err('Step 4 - Error');
+  $logger-&gt;warning('Step 4 - Warning');
+  $logger-&gt;notice('Step 4 - Notice');
+  $logger-&gt;info('Step 4 - Information');
+  $logger-&gt;debug('Step 4 - Debug');
+</pre>
+</body>

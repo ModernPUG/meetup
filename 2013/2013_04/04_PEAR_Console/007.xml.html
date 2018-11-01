@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>007.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "006.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "008.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>  &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;
+  &lt;command&gt;
+      &lt;name&gt;head&lt;/name&gt;
+      &lt;description&gt;Output the first part of files&lt;/description&gt;
+      &lt;version&gt;1.0.0&lt;/version&gt;
+      &lt;option name=&quot;lines&quot;&gt;
+  	&lt;short_name&gt;-n&lt;/short_name&gt;
+  	&lt;long_name&gt;--lines&lt;/long_name&gt;
+  	&lt;description&gt;print the first K lines instead of the first 10&lt;/description&gt;
+  	&lt;help_name&gt;LINES&lt;/help_name&gt;
+  	&lt;action&gt;StoreInt&lt;/action&gt;
+      &lt;/option&gt;
+      &lt;option name=&quot;bytes&quot;&gt;
+  	&lt;short_name&gt;-c&lt;/short_name&gt;
+  	&lt;long_name&gt;--bytes&lt;/long_name&gt;
+  	&lt;description&gt;print the first K bytes of each file&lt;/description&gt;
+  	&lt;help_name&gt;BYTES&lt;/help_name&gt;
+  	&lt;action&gt;StoreInt&lt;/action&gt;
+      &lt;/option&gt;
+      &lt;argument name=&quot;files&quot;&gt;
+  	&lt;description&gt;print the first 10 lines of each FILE to standard output&lt;/description&gt;
+  	&lt;multiple&gt;true&lt;/multiple&gt;
+  	&lt;help_name&gt;FILE&lt;/help_name&gt;
+      &lt;/argument&gt;
+  &lt;/command&gt;
+</pre>
+</body>

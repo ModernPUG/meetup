@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="HelloWorld" default="helloworld">
+    <target name="helloworld">
+	<echo msg="Hello world." />
+    </target>
+    <target name="hellokitty" depends="helloworld" description="I love kitty.">
+	<echo msg="Hello kitty." />
+    </target>
+</project>

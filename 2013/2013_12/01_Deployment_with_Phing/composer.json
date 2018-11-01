@@ -1,0 +1,12 @@
+{
+    "repositories": [
+        {
+            "type": "pear",
+            "url": "http://pear.php.net"
+        }
+    ],
+    "require": {
+        "phing/phing" : "2.6.*",
+        "pear-pear.php.net/VersionControl_Git": "0.4.*"
+    }
+}

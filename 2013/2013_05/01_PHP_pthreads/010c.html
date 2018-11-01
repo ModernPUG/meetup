@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>010c</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "010b" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "010d" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                         교착상태
+  
+  * 교착 상태(deadlock)란 두 개 이상의 작업이 서로 상대방의 
+    작업이 끝나기 만을 기다리고 있기 때문에 결과적으로 
+    아무것도 완료되지 못하는 상태를 가리킨다. (Wikipedia)
+  * 철학자들의 만찬 문제
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>

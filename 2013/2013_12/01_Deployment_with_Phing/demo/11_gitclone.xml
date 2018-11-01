@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DeploymentWithPhing" default="main">
+    <property name="webservers" value="www1,www2" />
+    <property name="staticservers" value="static1,static2" />
+
+    <patternset id="phpfiles">
+	<include name="**/*.php" />
+	<exclude name="**/test*.php" />
+    </patternset>
+
+     <patternset id="staticfiles">
+	<include name="**/*.css" />
+	<include name="**/*.js" />
+    </patternset>
+
+    <target name="prepare">
+	<property name="git_target_dir" value="/tmp/tmpproject2" />
+	<available file="${git_target_dir}" property="exists_project2" />
+	<if>
+	    <equals arg1="${exists_project2}" arg2="true" />
+	    <then>
+		<delete dir="${git_target_dir}" includeemptydirs="true" failonerror="true" />
+	    </then>
+	</if>
+	<gitclone repository="file:///Users/bookworm/workspace/sandbox/project2" targetPath="${git_target_dir}" />
+	<exec command="git checkout 1.0" dir="${git_target_dir}" />
+
+	<reflexive>
+	    <fileset dir="${git_target_dir}">
+		<patternset refid="phpfiles" />
+	    </fileset>
+	    <filterchain>
+		<replacetokens begintoken="##__" endtoken="__##">
+		    <token key="MYNAME" value="bookworm" />
+		</replacetokens>
+	    </filterchain>
+	</reflexive>
+    </target>
+
+    <target name="main" depends="prepare">
+	<foreach list="${webservers}" param="hostname" target="web" />
+	<foreach list="${staticservers}" param="hostname" target="static" />
+    </target>
+
+    <target name="web">
+	<phingcall target="scp">
+	    <property name="fileset_name" value="phpfiles" />
+	</phingcall>
+    </target>
+
+    <target name="static">
+	<phingcall target="scp">
+	    <property name="fileset_name" value="staticfiles" />
+	</phingcall>
+    </target>
+
+    <target name="scp">
+	<scp 
+	    username="bookworm" 
+	    host="${hostname}.local" 
+	    todir="/Users/bookworm/Sites/${hostname}/public" 
+	    pubkeyfile="~/.ssh/id_rsa.pub" 
+	    privkeyfile="~/.ssh/id_rsa"
+	>
+	    <fileset dir="${git_target_dir}">
+		<patternset refid="${fileset_name}" />
+	    </fileset>
+	</scp>
+    </target>
+</project>

@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>016</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "015.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "017" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+
+
+                                알고리즘 #1
+  
+  * 참조 횟수 계산(Reference Counting)
+    - Concurrent Cycle Collection in Reference Counted Systems
+  * refcount가 증가 -&gt; 가비지가 될 가능성이 없다
+  * refcount가 감소 -&gt; 가비지가 될 가능성이 있다
+  * refcount가 0이 되면 zval을 해제
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>

@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>022</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "021" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "023" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+
+
+
+
+                                 참고 사항
+  
+  * GC를 꺼도 root buffer에 zval을 수집한다
+  * GC를 끈 경우 root buffer가 가득차면 수집하지 않는다
+  * root buffer에 수집 못 한 zval은 메모리 누수를 일으킬 수 있다
+  * gc_collect_cycles 함수를 사용해 root buffer가 가득차지 않아도 GC를 할 수 있다
+  * GC를 끄기 전에 gc_collect_cycles를 호출하면 root buffer가 가득차는 것을 막는데 효과가 있다
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>

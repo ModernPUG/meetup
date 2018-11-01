@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>025.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "024z" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "026" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                                                             Cond
+  &lt;?php
+  class MyThread extends Thread
+  {
+      private $cond;
+      private $mutex;
+  
+      public function __construct($cond, $mutex)
+      {
+          $this-&gt;cond = $cond;
+          $this-&gt;mutex = $mutex;
+      }
+  
+      public function run()
+      {
+          for ($i = 0; $i &lt; 10; $i++) {
+              Mutex::lock($this-&gt;mutex);
+              Cond::wait($this-&gt;cond, $this-&gt;mutex);
+              echo &quot;&lt;&quot;.$this-&gt;getThreadId().&quot;:$i&quot;;
+              usleep(rand(10000, 20000));
+              echo &quot;&gt;\n&quot;;
+              usleep(rand(10000, 20000));
+              Mutex::unlock($this-&gt;mutex);
+          }
+      }
+  }
+  
+  $mutex = Mutex::create();
+  $cond = Cond::create();
+  
+  $t1 = new MyThread($cond, $mutex);
+  $t2 = new MyThread($cond, $mutex);
+  
+  $t1-&gt;start();
+  $t2-&gt;start();
+  
+  for ($i = 0; $i &lt; 5; $i++) {
+      Cond::signal($cond);
+      usleep(200000);
+  }
+  
+  for ($i = 0; $i &lt; 10; $i++) {
+      Cond::broadcast($cond);
+      usleep(200000);
+  }
+  
+  $t1-&gt;join();
+  $t2-&gt;join();
+  
+  Cond::destroy($cond);
+  Mutex::destroy($mutex);
+  
+  ?&gt;
+</pre>
+</body>

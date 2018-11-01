@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>022.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "021.php" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "023.php" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                   Add Column
+  &lt;?php
+  
+  require_once 'Console/Table.php';
+  
+  require_once 'factorial.php';
+  
+  $table = new Console_Table();
+  
+  $table-&gt;setHeaders(array('n', 'equation', 'factorial(n)'));
+  $table-&gt;setAlign(0, CONSOLE_TABLE_ALIGN_CENTER);
+  $table-&gt;setAlign(1, CONSOLE_TABLE_ALIGN_LEFT);
+  $table-&gt;setAlign(2, CONSOLE_TABLE_ALIGN_RIGHT);
+  
+  $equation = '1';
+  for ($n = 0; $n &lt;= 10; $n++) {
+      if ($n &gt; 1) {
+          $equation .= &quot; * $n&quot;;
+      }
+      $table-&gt;addRow(array($n, $equation, factorial($n)));
+  }
+  
+  $table-&gt;addCol(array_map(function ($n) { return &quot;f($n)&quot;; }, range(0, 10)), 0);
+  
+  echo $table-&gt;getTable();
+  
+  ?&gt;
+</pre>
+</body>
