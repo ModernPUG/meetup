@@ -30,7 +30,6 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 #### 2018년 7월 ####
 
 - [Reactive programming in PHP](https://www.slideshare.net/lazyfri13th/reactive-programming-in-php?fbclid=IwAR3esc884BA0oMd6kUyegJik0GliTZYUZ8-6R2LG4LhUj-TcNha1Dla1Dm0) (박종희)
-- ElasticSearch with X-Pack (안정수)
 - ELK 로깅 플랫폼 후기 (김주원)
 
 #### 2018년 6월 ####
