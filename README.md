@@ -11,6 +11,16 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 ## 발표자료 목록 ##
 
+#### 2018년 12월 ####
+- [이더리움 맛보기](https://medium.com/@ost5253/%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80-%EB%A7%9B%EB%B3%B4%EA%B8%B0-1-f43644ba4217) (오상택)
+- 돈이 되는 책쓰기 (이인호)
+- 단체 코딩 게임 - [가위바위보](https://github.com/ani2life/rock_paper_scissors)
+
+#### 2018년 11월 ####
+- 지니PHP 다국어 처리 알고리즘 (이호진)
+- [ling framework](https://www.slideshare.net/lazyfri13th/ling-framework?fbclid=IwAR2aTPLnGaFwHlWS0hZKrVN5gOk8b56B588S-sXuEFAyvei1gyf7dmhPZNM) (박종희)
+- [도커 기반 호스팅 구축 사례](https://code.shoplic.kr/docker-based-web-hosting/?fbclid=IwAR13ozxxHGLxjmXvxQhwMaeGkNhC1HyxiRFXj4FmGlQrt0VOCqmDfbX-l6A) (강동혁)
+
 #### 2018년 10월 ####
 
 - [Haproxy를 사용한 dos 방어존 구성하기](https://github.com/ModernPUG/meetup/blob/master/2018/2018_10/Haproxy%20%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20DOS%20%EB%B0%A9%EC%96%B4%20%EC%82%BD%EC%A7%88%EA%B8%B0_MPU.pdf) (안정수)
@@ -20,9 +30,9 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 #### 2018년 9월 ####
 
-- ElasticSearch with x-pack - 안정수님
-- 지니PHP 디자인패턴 - 이호진님
-- XE3.0 frontend form validation - 오승훈
+- ElasticSearch with x-pack (안정수)
+- 지니PHP 디자인패턴 (이호진)
+- XE3.0 frontend form validation (오승훈)
 
 #### 2018년 8월 ####
 - [지니 프레임워크](http://hojin.io/) (이호진)
