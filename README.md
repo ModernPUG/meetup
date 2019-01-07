@@ -11,6 +11,10 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 ## 발표자료 목록 ##
 
+#### 2019년 1월 ####
+- [ReasonableFramework](/2019/2019_01/ReasonableFramework.pdf) (고남현)
+- [PHP 7.2 마이그레이션](https://dico.me/php/articles/205?fbclid=IwAR17I-MN53miB_sjiXszFrdvL9gidzP3YYLFwV8QiqrFaq62LgyVOVu8cs0) (이현재)
+
 #### 2018년 12월 ####
 - [이더리움 맛보기](https://medium.com/@ost5253/%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80-%EB%A7%9B%EB%B3%B4%EA%B8%B0-1-f43644ba4217) (오상택)
 - 돈이 되는 책쓰기 (이인호)
