@@ -11,6 +11,9 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 ## 발표자료 목록 ##
 
+#### 2019년 4월 #### 
+- [kafka 알아보기](/2019/2019_04/Kafka_introduce_KR.pdf) (안정수)
+
 #### 2019년 3월 #### 
 - [AWS Elastic Beanstalk로 PHP 서비스 운영하기](https://github.com/appkr/eb-demo) (김주원)
 - [Composer 패키지 개발 및 배포 경험 회고](/2019/2019_03/composer%20%ED%8C%A8%ED%82%A4%EC%A7%80%20%EA%B0%9C%EB%B0%9C%20%EB%B0%8F%20%EB%B0%B0%ED%8F%AC%20%EA%B2%BD%ED%97%98%20%ED%9A%8C%EA%B3%A0.pdf) (정광섭)
