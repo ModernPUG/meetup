@@ -12,6 +12,7 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 ## 발표자료 목록 ##
 
 #### 2019년 4월 #### 
+- [코드리뷰 어떻게 하세요?](https://dico.me/topic/articles/226) (이현재)
 - [kafka 알아보기](/2019/2019_04/Kafka_introduce_KR.pdf) (안정수)
 - [라라벨 5.8 번역 후기](/2019/2019_04/laravel_translate.pdf) (김종운)
 
