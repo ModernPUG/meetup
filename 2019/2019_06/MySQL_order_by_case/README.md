@@ -31,7 +31,7 @@ ORDER BY
 SELECT * FROM test
 ORDER BY
     FIELD(`status`, 'run', 'stop'),
-    `end_at` DESC
+    `end_at` ASC
 ;
 
 SELECT * FROM test
