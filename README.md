@@ -11,6 +11,10 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 ## 발표자료 목록 ##
 
+#### 2019년 6월 ####
+- [MySQL 케바케 정렬](/2019/2019_06/MySQL_order_by_case/) (박민권)
+- [New in PHP 7.4](/2019/2019_06/new_in_php_74.pdf) (주영익)
+
 #### 2019년 5월 ####
 - [이러라고 만든 익명함수가 아닌데 자괴감들어](/2019/2019_05/anonymous_function_tip) (박민권)
 - 라즈베리파이(Raspberry Pi)를 이용한 pre-modern PHPer의 laravel 도전기 (박건상)
