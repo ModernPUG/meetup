@@ -11,6 +11,10 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 ## 발표자료 목록 ##
 
+#### 2019년 7월 ####
+- [ORM](https://docs.google.com/presentation/d/1-HbWIkx5NVbYL9IP03S7Kku3R6J3x-c_8aXZ3SDyB4M) (이현재)
+- [Laravel 연관배열(Map) 안써보기](/2019/2019_07/laravel_map.pptx) (유형환)
+
 #### 2019년 6월 ####
 - [MySQL 케바케 정렬](/2019/2019_06/MySQL_order_by_case/) (박민권)
 - [New in PHP 7.4](/2019/2019_06/new_in_php_74.pdf) (주영익)
