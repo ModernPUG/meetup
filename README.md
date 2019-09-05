@@ -11,6 +11,11 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 ## 발표자료 목록 ##
 
+#### 2019년 9월 ####
+- [static 변수의 활용](/2019/2019_09/static-variable.md) (박민권)
+- [라라벨 Vapor 사용기](#) (이현석)
+- [PHP & Docker](/2019/2019_09/php-on-docker.pdf) (윤영진)
+
 #### 2019년 8월 ####
 - [packagist.kr은 어떻게 운영되고 있을까](https://docs.google.com/presentation/d/1VLHxwYmZS7Pg6Z8sxia6ymv5hW3f10ZadogpgAyjams/edit?usp=sharing) (김종운)
 - 공공데이터(의료부문)의 활용방법소개 (박건상)
