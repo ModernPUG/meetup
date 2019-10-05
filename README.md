@@ -3,13 +3,15 @@ Modern PHP User Group Meetup
 
 Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브러리, 도구를 적극적으로 습득하고 알리는 목적으로 시작한 페이스북 그룹입니다.
 
-정기적으로 매월 첫번째 수요일에 모임을 통해 PHP 관련 정보를 공유하고 있습니다.
+매월 첫번째 수요일 모임에서 PHP 관련 정보를 공유하고 있습니다.
 
-모임 참가 신청은 페이스북 그룹 - Modern PHP를 통해 하실 수 있습니다.
-
- * [Modern PHP](https://www.facebook.com/groups/655071604594451/)
+모임 참가 신청은 페이스북 그룹 - [Modern PHP](https://www.facebook.com/groups/655071604594451/)에서 하실 수 있습니다.
 
 ## 발표자료 목록 ##
+
+#### 2019년 10월 ####
+- [우리회사의 개발환경 - 1부](#) (김종운)
+- [변화하는 기획속에서 개발하기](https://docs.google.com/presentation/d/1Av5YZFoqOoAgZ5fWhwdk06i4hf7H35zFsvvrqAGOk8A/) (손주호)
 
 #### 2019년 9월 ####
 - [static 변수의 활용](/2019/2019_09/static-variable.md) (박민권)
