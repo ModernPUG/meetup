@@ -9,6 +9,10 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 ## 발표자료 목록 ##
 
+#### 2019년 11월 ####
+- [Laravel Vapor 체험수기](/2019/2019_11/Laravel-Vapor-체험수기.pdf) (김나람)
+- [Laravel Vapor에 가린 PHP Serverless](http://haah.kr/2019/11/05/serverless-php-2019/) (주영익)
+
 #### 2019년 10월 ####
 - [우리회사의 개발환경 - 1부](https://docs.google.com/presentation/d/1y683XO5t_uoOUGmnUtyzQ4cHaOW0t69LlOGxLtvVupk) (김종운)
 - [변화하는 기획속에서 개발하기](https://docs.google.com/presentation/d/1Av5YZFoqOoAgZ5fWhwdk06i4hf7H35zFsvvrqAGOk8A/) (손주호)
