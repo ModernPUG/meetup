@@ -9,6 +9,14 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 ## 발표자료 목록 ##
 
+#### 2020년 1월 ####
+- [Cloud9을 이용한 라라벨 실시간 협업 환경 만들기](/2020/2020_01/Cloud9%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%9D%BC%EB%9D%BC%EB%B2%A8-%EC%8B%A4%EC%8B%9C%EA%B0%84-%ED%98%91%EC%97%85-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0.md) (김나람)
+- exeoutput으로 PHP 윈도우 GUI애플리케이션 개발 (용영환)
+
+
+#### 2019년 12월 ####
+- 송년회
+
 #### 2019년 11월 ####
 - [Laravel Vapor 체험수기](/2019/2019_11/Laravel-Vapor-%EC%B2%B4%ED%97%98%EC%88%98%EA%B8%B0.pdf) (김나람)
 - [Laravel Vapor에 가린 PHP Serverless](http://haah.kr/2019/11/05/serverless-php-2019/) (주영익)
