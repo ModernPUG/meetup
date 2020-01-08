@@ -11,8 +11,7 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 #### 2020년 1월 ####
 - [Cloud9을 이용한 라라벨 실시간 협업 환경 만들기](/2020/2020_01/Cloud9%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%9D%BC%EB%9D%BC%EB%B2%A8-%EC%8B%A4%EC%8B%9C%EA%B0%84-%ED%98%91%EC%97%85-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0.md) (김나람)
-- exeoutput으로 PHP 윈도우 GUI애플리케이션 개발 (용영환)
-
+- [ExeOutput 으로 PHP 윈도우 GUI 애플리케이션 개발](/2020/2020_01/ExeOutput%20%EC%9C%BC%EB%A1%9C%20PHP%20%EC%9C%88%EB%8F%84%EC%9A%B0%20GUI%20%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%20%EA%B0%9C%EB%B0%9C.pdf) (용영환)
 
 #### 2019년 12월 ####
 - 송년회
