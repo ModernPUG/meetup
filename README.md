@@ -11,6 +11,7 @@ Modern PHP User Group은 PHP 5.3 이후의 새로운 개발 방식과 라이브�
 
 #### 2022년 7월 ####
  - [AWS로 PHP 시작하기](/2022/2022_07/20220706-JoelKang-AWS%EB%A1%9C-PHP-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.pdf) (JoelKang)
+ - [숨은 배치 찾기(feat. 젠킨스)](/2022/2022_07/20220706-dhtmdgkr123-%EC%88%A8%EC%9D%80-%EB%B0%B0%EC%B9%98-%EC%B0%BE%EA%B8%B0(feat-%EC%A0%A0%ED%82%A8%EC%8A%A4).pdf) (dhtmdgkr123)
  - [PHP와 MAS](/2022/2022_07/20220706-%EC%9C%A4%EC%98%81%EC%A7%84-PHP%EC%99%80-MSA.pdf) (윤영진)
 
 #### 2020년 1월 ####
